@@ -40,7 +40,7 @@ const ClassSubjectScreen: FC = () => {
         <div className="mt-1 w-full gap-2 grid grid-cols-1 lg:grid-cols-2  xl:grid-cols-3">
           {readSubject?.map((props: any) => (
             <div
-              key={props._id}
+              key={props?._id}
               className="bg-white border flex flex-col rounded-2xl pb-2 min-h-[200px] px-4 pt-4"
             >
               <div className="mt-3 flex justify-between items-center font-bold">
@@ -162,7 +162,7 @@ const ClassDetailScreen = () => {
         <div className="bg-blue-950 text-white w-[160px] md:w-[300px] px-4 py-2 rounded-lg ">
           <div>Total Number of Students</div>
           <div className="text-[35px] font-medium">
-            {classroom?.classStudents.length}{" "}
+            {classroom?.classStudents?.length}{" "}
             <span className="text-[20px]">Students</span>
           </div>
         </div>
@@ -179,19 +179,19 @@ const ClassDetailScreen = () => {
             <p className="text-[12px]">
               <p className="font-normal">First Term</p>
               <p className="font-bold">
-                ₦{classroom?.class2ndFee.toLocaleString()}
+                ₦{classroom?.class2ndFee?.toLocaleString()}
               </p>
             </p>
             <p className="text-[12px]">
               <p className="font-normal">Second Term</p>
               <p className="font-bold">
-                ₦{classroom?.class3rdFee.toLocaleString()}
+                ₦{classroom?.class3rdFee?.toLocaleString()}
               </p>
             </p>
             <p className="text-[12px]">
               <p className="font-normal">Third Term</p>
               <p className="font-bold">
-                ₦{classroom?.class1stFee.toLocaleString()}
+                ₦{classroom?.class1stFee?.toLocaleString()}
               </p>
             </p>
           </div>
